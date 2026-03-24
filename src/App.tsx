@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/nhjm-study/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/plus" element={<Plus />} />
