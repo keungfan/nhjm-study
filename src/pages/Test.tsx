@@ -24,6 +24,7 @@ export default function Test() {
   const [answers, setAnswers] = useState<string[]>([]);
   const [points, setPoints] = useState<number | null>(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [checkedQuestions, setCheckedQuestions] = useState<Record<number, boolean>>({});
 
   useEffect(() => {
     generateQuestions();
@@ -89,14 +90,12 @@ export default function Test() {
     setAnswers(newAnswers);
   };
 
-  const handleTest = () => {
-    let correctCount = 0;
-    answers.forEach((answer, index) => {
-      if (answer === questions[index].correctAnswer) {
-        correctCount++;
-      }
-    });
-    setPoints(correctCount);
+  const handleCheckQuestion = () => {
+    const userAnswer = answers[currentQuestion];
+    const isCorrect = userAnswer === questions[currentQuestion].correctAnswer;
+    const newCheckedQuestions = { ...checkedQuestions };
+    newCheckedQuestions[currentQuestion] = isCorrect;
+    setCheckedQuestions(newCheckedQuestions);
   };
 
   const handleNext = () => {
@@ -207,9 +206,24 @@ export default function Test() {
               </button>
             </div>
 
-            <button onClick={handleTest} className="test-button">
+            <button onClick={handleCheckQuestion} className="check-question-btn">
               ✅ {t('buttons.check')}
             </button>
+
+            {checkedQuestions[currentQuestion] !== undefined && (
+              <div className={`question-feedback ${checkedQuestions[currentQuestion] ? 'correct' : 'incorrect'}`}>
+                <p>
+                  {checkedQuestions[currentQuestion]
+                    ? `✅ ${t('results.correct')}`
+                    : `❌ ${t('results.incorrect')}`}
+                </p>
+                {!checkedQuestions[currentQuestion] && (
+                  <p className="correct-answer">
+                    {t('results.correctAnswer')}: <strong>{question.correctAnswer}</strong>
+                  </p>
+                )}
+              </div>
+            )}
 
             {points !== null && (
               <div className="results">

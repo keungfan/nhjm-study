@@ -22,6 +22,7 @@
     "score": "Your Score:",
     "correct": "Correct!",
     "incorrect": "Try Again!",
+    "correctAnswer": "Correct answer",
     "outOf": "out of"
   },
   "test": {

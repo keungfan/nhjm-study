@@ -19,6 +19,7 @@ export default function Plus() {
   const [answers, setAnswers] = useState<string[]>([]);
   const [points, setPoints] = useState<number | null>(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [checkedQuestions, setCheckedQuestions] = useState<Record<number, boolean>>({});
 
   useEffect(() => {
     generateQuestions();
@@ -51,6 +52,14 @@ export default function Plus() {
     const newAnswers = [...answers];
     newAnswers[currentQuestion] = e.target.value;
     setAnswers(newAnswers);
+  };
+
+  const handleCheckQuestion = () => {
+    const userAnswer = parseInt(answers[currentQuestion]);
+    const isCorrect = userAnswer === questions[currentQuestion].answer;
+    const newCheckedQuestions = { ...checkedQuestions };
+    newCheckedQuestions[currentQuestion] = isCorrect;
+    setCheckedQuestions(newCheckedQuestions);
   };
 
   const handleTest = () => {
@@ -137,7 +146,28 @@ export default function Plus() {
                 className="answer-input"
                 min="0"
               />
+              <button
+                onClick={handleCheckQuestion}
+                className="check-question-btn"
+              >
+                {t('buttons.check')}
+              </button>
             </div>
+
+            {checkedQuestions[currentQuestion] !== undefined && (
+              <div className={`question-feedback ${checkedQuestions[currentQuestion] ? 'correct' : 'incorrect'}`}>
+                <p>
+                  {checkedQuestions[currentQuestion]
+                    ? `✅ ${t('results.correct')}`
+                    : `❌ ${t('results.incorrect')}`}
+                </p>
+                {!checkedQuestions[currentQuestion] && (
+                  <p className="correct-answer">
+                    {t('results.correctAnswer')}: <strong>{questions[currentQuestion].answer}</strong>
+                  </p>
+                )}
+              </div>
+            )}
 
             <div className="navigation-buttons">
               <button

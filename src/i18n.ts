@@ -26,6 +26,7 @@ const en = {
     "score": "Your Score:",
     "correct": "Correct!",
     "incorrect": "Try Again!",
+    "correctAnswer": "Correct answer",
     "outOf": "out of"
   },
   "test": {
@@ -70,6 +71,7 @@ const vi = {
     "score": "Điểm Của Bạn:",
     "correct": "Chính Xác!",
     "incorrect": "Thử Lại!",
+    "correctAnswer": "Đáp án đúng",
     "outOf": "trên"
   },
   "test": {
