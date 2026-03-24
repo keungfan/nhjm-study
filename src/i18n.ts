@@ -13,6 +13,7 @@ const en = {
     "test": "Test",
     "home": "Home",
     "check": "Check",
+    "checkAll": "Check All",
     "next": "Next",
     "previous": "Previous",
     "submit": "Submit",
@@ -44,6 +45,10 @@ const en = {
     "photoAlt": "Random photo",
     "changePhoto": "Change Photo",
     "noPhotos": "No photos available"
+  },
+  "feedback": {
+    "showAnswer": "Show Answer",
+    "hideAnswer": "Hide Answer"
   }
 };
 
@@ -58,6 +63,7 @@ const vi = {
     "test": "Bài Kiểm Tra",
     "home": "Trang Chủ",
     "check": "Kiểm Tra",
+    "checkAll": "Chấm điểm",
     "next": "Tiếp Theo",
     "previous": "Quay Lại",
     "submit": "Nộp",
@@ -89,6 +95,10 @@ const vi = {
     "photoAlt": "Ảnh ngẫu nhiên",
     "changePhoto": "Đổi Ảnh",
     "noPhotos": "Không có ảnh"
+  },
+  "feedback": {
+    "showAnswer": "Xem Đáp Án",
+    "hideAnswer": "Ẩn Đáp Án"
   }
 };
 

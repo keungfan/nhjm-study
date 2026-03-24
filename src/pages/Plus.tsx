@@ -20,6 +20,7 @@ export default function Plus() {
   const [points, setPoints] = useState<number | null>(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [checkedQuestions, setCheckedQuestions] = useState<Record<number, boolean>>({});
+  const [revealedAnswers, setRevealedAnswers] = useState<Record<number, boolean>>({});
 
   useEffect(() => {
     generateQuestions();
@@ -60,6 +61,12 @@ export default function Plus() {
     const newCheckedQuestions = { ...checkedQuestions };
     newCheckedQuestions[currentQuestion] = isCorrect;
     setCheckedQuestions(newCheckedQuestions);
+  };
+
+  const handleRevealAnswer = () => {
+    const newRevealedAnswers = { ...revealedAnswers };
+    newRevealedAnswers[currentQuestion] = true;
+    setRevealedAnswers(newRevealedAnswers);
   };
 
   const handleTest = () => {
@@ -162,6 +169,14 @@ export default function Plus() {
                     : `❌ ${t('results.incorrect')}`}
                 </p>
                 {!checkedQuestions[currentQuestion] && (
+                  <button
+                    onClick={handleRevealAnswer}
+                    className="reveal-answer-btn"
+                  >
+                    {revealedAnswers[currentQuestion] ? t('feedback.hideAnswer') : t('feedback.showAnswer')}
+                  </button>
+                )}
+                {!checkedQuestions[currentQuestion] && revealedAnswers[currentQuestion] && (
                   <p className="correct-answer">
                     {t('results.correctAnswer')}: <strong>{questions[currentQuestion].answer}</strong>
                   </p>
@@ -192,7 +207,7 @@ export default function Plus() {
             </div>
 
             <button onClick={handleTest} className="test-button">
-              ✅ {t('buttons.check')}
+              ✅ {t('buttons.checkAll')}
             </button>
 
             {points !== null && (

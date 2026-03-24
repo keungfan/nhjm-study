@@ -8,7 +8,8 @@
     "subtraction": "Phép Trừ",
     "test": "Bài Kiểm Tra",
     "home": "Trang Chủ",
-    "check": "Chấm điểm",
+    "check": "Kiểm tra",
+    "checkAll": "Chấm điểm",
     "next": "Tiếp Theo",
     "previous": "Quay Lại",
     "submit": "Nộp",
@@ -40,5 +41,8 @@
     "photoAlt": "Ảnh ngẫu nhiên",
     "changePhoto": "Đổi Ảnh",
     "noPhotos": "Không có ảnh"
+  },
+  "feedback": {
+    "showAnswer": "Xem Đáp Án",
+    "hideAnswer": "Ẩn Đáp Án"
   }
-}
