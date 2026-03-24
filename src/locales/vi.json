@@ -1,0 +1,43 @@
+{
+  "home": {
+    "title": "🌈 Phiêu Lưu Toán Học 🌈",
+    "subtitle": "Hãy học toán cùng nhau!"
+  },
+  "buttons": {
+    "addition": "Phép Cộng",
+    "subtraction": "Phép Trừ",
+    "test": "Bài Kiểm Tra",
+    "home": "Trang Chủ",
+    "check": "Chấm điểm",
+    "next": "Tiếp Theo",
+    "previous": "Quay Lại",
+    "submit": "Nộp",
+    "retake": "Làm Lại"
+  },
+  "settings": {
+    "questions": "Số Câu Hỏi:",
+    "layout": "Bố Cục Dọc"
+  },
+  "results": {
+    "score": "Điểm Của Bạn:",
+    "correct": "Chính Xác!",
+    "incorrect": "Thử Lại!",
+    "outOf": "trên"
+  },
+  "test": {
+    "choose": "Chọn ký hiệu đúng:",
+    "lessThan": "Nhỏ hơn",
+    "equal": "Bằng nhau",
+    "greaterThan": "Lớn hơn"
+  },
+  "language": "Ngôn Ngữ:",
+  "selectPhoto": "Chọn Ảnh:",
+  "noPhotos": "Không có ảnh. Vui lòng thêm ảnh vào thư mục /public/photos.",
+  "photoFrame": {
+    "title": "Album Ảnh",
+    "loading": "Đang tải...",
+    "photoAlt": "Ảnh ngẫu nhiên",
+    "changePhoto": "Đổi Ảnh",
+    "noPhotos": "Không có ảnh"
+  }
+}
