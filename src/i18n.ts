@@ -36,7 +36,14 @@ const en = {
   },
   "language": "Language:",
   "selectPhoto": "Select Photo:",
-  "noPhotos": "No photos available. Add photos to /public/photos folder."
+  "noPhotos": "No photos available. Add photos to /public/photos folder.",
+  "photoFrame": {
+    "title": "Random Photo",
+    "loading": "Loading...",
+    "photoAlt": "Random photo",
+    "changePhoto": "Change Photo",
+    "noPhotos": "No photos available"
+  }
 };
 
 const vi = {
@@ -73,7 +80,14 @@ const vi = {
   },
   "language": "Ngôn Ngữ:",
   "selectPhoto": "Chọn Ảnh:",
-  "noPhotos": "Không có ảnh. Vui lòng thêm ảnh vào thư mục /public/photos."
+  "noPhotos": "Không có ảnh. Vui lòng thêm ảnh vào thư mục /public/photos.",
+  "photoFrame": {
+    "title": "Album Ảnh",
+    "loading": "Đang tải...",
+    "photoAlt": "Ảnh ngẫu nhiên",
+    "changePhoto": "Đổi Ảnh",
+    "noPhotos": "Không có ảnh"
+  }
 };
 
 const resources = {

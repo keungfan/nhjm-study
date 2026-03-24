@@ -58,7 +58,7 @@ export default function PhotoFrame({ position = 'left' }: PhotoFrameProps) {
           <div className="photo-frame-display">
             {selectedPhoto && (
               <img
-                src={`/photos/${selectedPhoto}`}
+                src={`${import.meta.env.BASE_URL}photos/${selectedPhoto}`}
                 alt={t('photoFrame.photoAlt')}
                 className="photo-frame-image"
               />
