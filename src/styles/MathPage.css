@@ -316,7 +316,7 @@
 
 .question-feedback {
   width: 100%;
-  max-width: 400px;
+  max-width: none;
   padding: 20px;
   border-radius: 15px;
   margin-bottom: 20px;

@@ -101,7 +101,7 @@ export default function Test() {
 
   const handleRevealAnswer = () => {
     const newRevealedAnswers = { ...revealedAnswers };
-    newRevealedAnswers[currentQuestion] = true;
+    newRevealedAnswers[currentQuestion] = !newRevealedAnswers[currentQuestion];
     setRevealedAnswers(newRevealedAnswers);
   };
 

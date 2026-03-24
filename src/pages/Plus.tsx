@@ -65,7 +65,7 @@ export default function Plus() {
 
   const handleRevealAnswer = () => {
     const newRevealedAnswers = { ...revealedAnswers };
-    newRevealedAnswers[currentQuestion] = true;
+    newRevealedAnswers[currentQuestion] = !newRevealedAnswers[currentQuestion];
     setRevealedAnswers(newRevealedAnswers);
   };
 

@@ -63,7 +63,7 @@ export default function Minus() {
 
   const handleRevealAnswer = () => {
     const newRevealedAnswers = { ...revealedAnswers };
-    newRevealedAnswers[currentQuestion] = true;
+    newRevealedAnswers[currentQuestion] = !newRevealedAnswers[currentQuestion];
     setRevealedAnswers(newRevealedAnswers);
   };
 
