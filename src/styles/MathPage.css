@@ -291,7 +291,7 @@
 
 .check-question-btn {
   width: auto;
-  padding: 15px 25px;
+  padding: 15px;
   background: linear-gradient(135deg, #86efac 0%, #6ee7b7 100%);
   border: 3px solid #16a34a;
   border-radius: 15px;

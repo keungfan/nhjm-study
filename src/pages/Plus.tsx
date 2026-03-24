@@ -34,7 +34,7 @@ export default function Plus() {
       
       // Ensure addition results are ≤ 100
       if (num1 + num2 > 100) {
-        num2 = 100 - num1;
+        num2 = 100 - num1 - Math.floor(Math.random() * 33);
       }
       
       newQuestions.push({

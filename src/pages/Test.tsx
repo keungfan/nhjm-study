@@ -46,13 +46,13 @@ export default function Test() {
       if (op1 === '−' && num1 < num2) {
         [num1, num2] = [num2, num1]; // Swap to ensure num1 >= num2
       } else if (op1 === '+' && num1 + num2 > 100) {
-        num2 = 100 - num1; // Adjust num2 to ensure sum ≤ 100
+        num2 = 100 - num1 - Math.floor(Math.random() * 33); // Adjust num2 to ensure sum ≤ 100
       }
       
       if (op2 === '−' && num3 < num4) {
         [num3, num4] = [num4, num3]; // Swap to ensure num3 >= num4
       } else if (op2 === '+' && num3 + num4 > 100) {
-        num4 = 100 - num3; // Adjust num4 to ensure sum ≤ 100
+        num4 = 100 - num3 - Math.floor(Math.random() * 33); // Adjust num4 to ensure sum ≤ 100
       }
 
       const result1 = op1 === '+' ? num1 + num2 : num1 - num2;
